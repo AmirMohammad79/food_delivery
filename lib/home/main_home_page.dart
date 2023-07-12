@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/utils/colors.dart';
+import 'package:food_delivery/widgets/big_text.dart';
+
+import '../widgets/small_text.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({Key? key}) : super(key: key);
@@ -24,9 +27,14 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 children: [
                   Container(
                     child: Column(
-                      children: const [
-                        Text("counteryq"),
-                        Text("data"),
+                      children:  [
+                        BigText(text: "iran" , color: AppColors.mainColor),
+                        Row(
+                          children: [
+                            SmallText(text: "yasuj" , color: Colors.black54),
+                            Icon(Icons.arrow_drop_down_rounded , color: Colors.black54,)
+                          ],
+                        )
                       ],
                     ),
                   ),
