@@ -25,7 +25,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   Container(
                     child: Column(
                       children: const [
-                        Text("data"),
+                        Text("counteryq"),
                         Text("data"),
                       ],
                     ),
