@@ -14,7 +14,6 @@ final IconData icon;
         Icon(icon , color: iconColor,) ,
         const SizedBox(width: 5,),
         SmallText(text: text),
-        const SizedBox(width: 20,),
       ],
     );
   }
