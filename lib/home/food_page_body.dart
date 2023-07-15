@@ -139,6 +139,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                               (index) => Icon(
                                     Icons.star,
                                     color: AppColors.mainColor,
+                                size: Dimensions.iconSize24,
                                   )),
                         ),
                          SizedBox(

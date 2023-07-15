@@ -35,7 +35,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                         Row(
                           children: [
                             SmallText(text: "yasuj" , color: Colors.black54),
-                            Icon(Icons.arrow_drop_down_rounded , color: Colors.black54,)
+                            Icon(Icons.arrow_drop_down_rounded , color: Colors.black54, size: Dimensions.iconSize24,)
                           ],
                         )
                       ],
