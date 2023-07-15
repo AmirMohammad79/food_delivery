@@ -14,6 +14,7 @@ static double height20= screenHeight /43.771;
 static double height30 = screenHeight /29.180;
 static double height45 = screenHeight /19.453;
 
+
 // dynamic width and padding and margin
   static double width5 = screenHeight /175.085;
   static double width10 = screenHeight /87.542;
@@ -26,6 +27,7 @@ static double height45 = screenHeight /19.453;
   static double font20= screenHeight /43.771;
   static double font12= screenHeight /72.952;
 
+
   // dynamic icons size
   static double iconSize24= screenHeight /36.476;
 
@@ -36,4 +38,7 @@ static double height45 = screenHeight /19.453;
   // dynamic DotsIndicator
   static double dotsIndicator9 = screenHeight /97.269;
   static double dotsIndicator18 = screenHeight /48.634;
+  // listView Image Size
+ static double listViewImageSize =  screenHeight / 7.295;
+ static double listViewTextCountSize =   screenHeight /8.7542;
 }
