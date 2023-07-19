@@ -38,7 +38,10 @@ static double height45 = screenHeight /19.453;
   // dynamic DotsIndicator
   static double dotsIndicator9 = screenHeight /97.269;
   static double dotsIndicator18 = screenHeight /48.634;
+
   // listView Image Size
  static double listViewImageSize =  screenHeight / 7.295;
  static double listViewTextCountSize =   screenHeight /8.7542;
+ //popular food
+  static double popularFoodImgSiz =  screenHeight / 2.501;
 }
