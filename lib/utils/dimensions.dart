@@ -30,6 +30,7 @@ static double height45 = screenHeight /19.453;
 
   // dynamic icons size
   static double iconSize24= screenHeight /36.476;
+  static double iconSize16= screenHeight /54.713;
 
 // dynamic radius
   static double radius15 = screenHeight /58.361;
