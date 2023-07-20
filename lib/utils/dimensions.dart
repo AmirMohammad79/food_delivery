@@ -13,7 +13,7 @@ static double height15 = screenHeight /58.361;
 static double height20= screenHeight /43.771;
 static double height30 = screenHeight /29.180;
 static double height45 = screenHeight /19.453;
-
+  static double height120 =  screenHeight / 7.295;
 
 // dynamic width and padding and margin
   static double width5 = screenHeight /175.085;
@@ -26,6 +26,7 @@ static double height45 = screenHeight /19.453;
 //dynamic font
   static double font20= screenHeight /43.771;
   static double font12= screenHeight /72.952;
+  static double font26= screenHeight /33.67;
 
 
   // dynamic icons size
