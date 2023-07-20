@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/widgets/AppIcon.dart';
 import 'package:food_delivery/widgets/app_column.dart';
+import 'package:food_delivery/widgets/expandable_text_widget.dart';
 
 import '../../utils/colors.dart';
 import '../../widgets/big_text.dart';
-import '../../widgets/icon_and_text_widget.dart';
-import '../../widgets/small_text.dart';
 
 class PopularFoodDetail extends StatelessWidget {
   const PopularFoodDetail({Key? key}) : super(key: key);
@@ -17,6 +16,7 @@ class PopularFoodDetail extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          //background image
           Positioned(
             left: 0,
             right: 0,
@@ -30,6 +30,7 @@ class PopularFoodDetail extends StatelessWidget {
               )),
             ),
           ),
+          // icon widget
           Positioned(
             top: Dimensions.height45,
             left: Dimensions.width20,
@@ -42,6 +43,7 @@ class PopularFoodDetail extends StatelessWidget {
               ],
             ),
           ),
+          //introduction of food
           Positioned(
             right: 0,
             left: 0,
@@ -70,16 +72,24 @@ class PopularFoodDetail extends StatelessWidget {
                   SizedBox(
                     height: Dimensions.height20,
                   ),
-                  BigText(text: "Introduce")
+                  BigText(text: "Introduce"),
+                  SizedBox(
+                    height: Dimensions.height20,
+                  ),
+                  //expandable text widget
+                  const Expanded(
+                      child: SingleChildScrollView(
+                          child: ExpandableTextWidget(
+                              text:
+                                  "Spaghetti is the quintessential Italian pasta. It is long – like a string (hence the name, as spago means string) – round in cross-section and made from durum wheat semolina. Commercial varieties are generally used, but artisanal versions are easy to find.")))
                 ],
               ),
             ),
-          ) ,
-
+          ),
         ],
       ),
       bottomNavigationBar: Container(
-        height: Dimensions.height120,
+        height: Dimensions.bottomHeight,
         padding: EdgeInsets.only(
             top: Dimensions.height20,
             bottom: Dimensions.height20,

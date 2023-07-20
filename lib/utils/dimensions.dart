@@ -13,7 +13,7 @@ static double height15 = screenHeight /58.361;
 static double height20= screenHeight /43.771;
 static double height30 = screenHeight /29.180;
 static double height45 = screenHeight /19.453;
-  static double height120 =  screenHeight / 7.295;
+
 
 // dynamic width and padding and margin
   static double width5 = screenHeight /175.085;
@@ -27,6 +27,7 @@ static double height45 = screenHeight /19.453;
   static double font20= screenHeight /43.771;
   static double font12= screenHeight /72.952;
   static double font26= screenHeight /33.67;
+  static double font16= screenHeight /54.713;
 
 
   // dynamic icons size
@@ -46,4 +47,6 @@ static double height45 = screenHeight /19.453;
  static double listViewTextCountSize =   screenHeight /8.7542;
  //popular food
   static double popularFoodImgSiz =  screenHeight / 2.501;
+  // bottom height
+  static double bottomHeight =  screenHeight / 7.295;
 }
