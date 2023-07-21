@@ -78,10 +78,12 @@ class PopularFoodDetail extends StatelessWidget {
                   ),
                   //expandable text widget
                   const Expanded(
-                      child: SingleChildScrollView(
-                          child: ExpandableTextWidget(
-                              text:
-                                  "Spaghetti is the quintessential Italian pasta. It is long – like a string (hence the name, as spago means string) – round in cross-section and made from durum wheat semolina. Commercial varieties are generally used, but artisanal versions are easy to find.")))
+                    child: SingleChildScrollView(
+                      child: ExpandableTextWidget(
+                          text:
+                              "Spaghetti is the quintessential Italian pasta. It is long – like a string (hence the name, as spago means string) – round in cross-section and made from durum wheat semolina. Commercial varieties are generally used, but artisanal versions are easy to find."),
+                    ),
+                  )
                 ],
               ),
             ),

@@ -27,6 +27,7 @@ static double height45 = screenHeight /19.453;
   static double font20= screenHeight /43.771;
   static double font12= screenHeight /72.952;
   static double font26= screenHeight /33.67;
+  static double font24= screenHeight /36.475;
   static double font16= screenHeight /54.713;
 
 
@@ -49,4 +50,8 @@ static double height45 = screenHeight /19.453;
   static double popularFoodImgSiz =  screenHeight / 2.501;
   // bottom height
   static double bottomHeight =  screenHeight / 7.295;
+  // expandedHeight
+  static double  expandedHeight =  screenHeight / 2.918;
+  //toolbarHeight
+  static double  toolbarHeight =  screenHeight / 12.506;
 }
