@@ -49,7 +49,7 @@ static double height45 = screenHeight /19.453;
  //popular food
   static double popularFoodImgSiz =  screenHeight / 2.501;
   // bottom height
-  static double bottomHeight =  screenHeight / 7.295;
+  static double bottomHeight =  screenHeight / 8.295;
   // expandedHeight
   static double  expandedHeight =  screenHeight / 2.918;
   //toolbarHeight
