@@ -1,6 +1,8 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/controllers/popular_product_controller.dart';
+import 'package:food_delivery/models/products_model.dart';
+import 'package:food_delivery/utils/app_constants.dart';
 import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/widgets/app_column.dart';
@@ -49,21 +51,21 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               controller: pageController,
               itemCount: popularProducts.popularProductList.length,
               itemBuilder: (context, position) {
-                return _buildPageItem(position);
+                return _buildPageItem(position , popularProducts.popularProductList[position]);
               },
             ),
           );
         }),
         // dots
-        GetBuilder<PopularProductController>(builder:(popularProducts){
+        GetBuilder<PopularProductController>(builder: (popularProducts) {
           return DotsIndicator(
-            dotsCount: 5,
+            dotsCount: popularProducts.popularProductList.isEmpty?1:popularProducts.popularProductList.length,
             position: _currPageValue,
             decorator: DotsDecorator(
               activeColor: AppColors.mainColor,
               size: Size.square(Dimensions.dotsIndicator9),
               activeSize:
-              Size(Dimensions.dotsIndicator18, Dimensions.dotsIndicator9),
+                  Size(Dimensions.dotsIndicator18, Dimensions.dotsIndicator9),
               activeShape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0)),
             ),
@@ -176,7 +178,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     );
   }
 
-  Widget _buildPageItem(int index) {
+  Widget _buildPageItem(int index,ProductModel popularProduct) {
     Matrix4 matrix = Matrix4.identity();
     if (index == _currPageValue.floor()) {
       var currScale = 1 - (_currPageValue - index) * (1 - _scaleFactor);
@@ -211,13 +213,15 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             margin: EdgeInsets.only(
                 left: Dimensions.width10, right: Dimensions.width10),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(Dimensions.radius30),
               color: index.isEven
                   ? const Color(0xff69c5df)
                   : const Color(0xff9294cc),
-              image: const DecorationImage(
+              image:  DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage("assets/image/food0.png"),
+                image: NetworkImage(
+                  AppConstant.baseUrl + "/uploads/"+ popularProduct.img!
+                )
               ),
             ),
           ),
@@ -245,7 +249,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       top: Dimensions.height15,
                       left: Dimensions.width15,
                       right: Dimensions.width15),
-                  child: AppColumn(text: "Chinese Side")),
+                  child: AppColumn(text: popularProduct.name!)),
             ),
           )
         ],
